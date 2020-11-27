@@ -1,12 +1,10 @@
 Stuff I Looked Up, And I Didn't Want To Look Up Again: 
 
-Markdown | Less | Pretty
+The Stuff | The results | teh notez
 --- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+How to WYSIWYG edit Blogger tables | You **CAN'T** | 2020 my ass
 
 Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
-
