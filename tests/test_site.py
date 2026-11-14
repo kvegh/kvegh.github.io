@@ -28,6 +28,8 @@ PREVIEWS = {
     "/assets/thumbnails/aap-autodeploy.png": "https://kvegh.github.io/aap_autodeploy_configascode/#separation",
     "/assets/thumbnails/aiops-selfhealing.png": "https://kvegh.github.io/aiops-selfhealing-demo/#step=1",
     "/assets/thumbnails/windows-patching.png": WINDOWS_VISUALIZATION,
+    "/assets/thumbnails/ccng-laptop.png": "/assets/thumbnails/ccng-laptop.png",
+    "/assets/thumbnails/ccng-mobile.jpg": "/assets/thumbnails/ccng-mobile.jpg",
 }
 
 
@@ -126,17 +128,19 @@ def verify(base_url):
     print(f"PASS homepage: version {version}, author, 14 distinct projects, links and styles")
 
     images = {attributes.get("src"): (attributes, link) for attributes, link in homepage.images}
-    require(len(homepage.images) == 3 and set(images) == set(PREVIEWS), "Expected three project thumbnails")
+    require(len(homepage.images) == len(PREVIEWS) and set(images) == set(PREVIEWS),
+            f"Expected {len(PREVIEWS)} project thumbnails")
     for source, destination in PREVIEWS.items():
         attributes, link = images[source]
-        require(link == destination, f"Incorrect first-step thumbnail destination: {source}")
+        require(link == destination, f"Incorrect thumbnail destination: {source}")
         require(bool(attributes.get("alt", "").strip()), f"Missing thumbnail description: {source}")
         require(attributes.get("loading") == "lazy", f"Thumbnail should load lazily: {source}")
         data = fetch_bytes(base_url, source)
-        require(data.startswith(b"\x89PNG\r\n\x1a\n"), f"Thumbnail is not a PNG: {source}")
+        signature = b"\x89PNG\r\n\x1a\n" if source.endswith(".png") else b"\xff\xd8\xff"
+        require(data.startswith(signature), f"Thumbnail is not the expected image format: {source}")
         expected = (Path(__file__).resolve().parents[1] / source.lstrip("/")).read_bytes()
         require(data == expected, f"Published thumbnail differs from supplied screenshot: {source}")
-    print("PASS thumbnails: three original screenshots, descriptions and first-step links")
+    print(f"PASS thumbnails: {len(PREVIEWS)} original screenshots, descriptions and intended links")
 
     archive = Page(fetch(base_url, "archive/"))
     require("@kvegh's stuff here." in archive.visible_text(), "Old homepage text missing")

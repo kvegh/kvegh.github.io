@@ -154,3 +154,23 @@ version/author/14 repositories/styles, three exact original PNGs and first-step
 links, archived homepage, and original notes. Browser interaction/rendering is
 not claimed; first-step fragment behavior was verified from current public
 initialization code.
+
+
+## 2026-11-14 — CCNG laptop and mobile screenshot thumbnails
+
+The owner requested one good-looking laptop screenshot and the mobile
+screenshot on the CCNG entry as well. After visual inspection, choose the
+existing public worker-workspace laptop view and mobile-overview portrait.
+The laptop view presents the workspace without the coordinator warning banner.
+Copy both exact original files, without editing, to local homepage assets.
+
+Use the existing whole-image thumbnail presentation, with a compact portrait
+variant and responsive wrapping beside the laptop view. Both thumbnails open
+their full-size local image; CCNG has no separate interactive visualization
+identified here. Retain its repository and existing screenshot links. This
+extends the existing thumbnail presentation, patch version 0.1.1.
+
+The deployed HTTP check now expects five previews and supports PNG/JPEG image
+bytes. No browser, image generator, framework or scheduled task is introduced.
+Original three visualization destinations remain the supported first-step URLs.
+Implementation reference and final deployed verification follow after commit.
