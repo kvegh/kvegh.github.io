@@ -102,9 +102,11 @@ revert to roll back a future site change; do not rewrite historical commits.
 
 ## Verified publication
 
-Version 0.0.4 was published from functional source
-[`3d25f32`](https://github.com/kvegh/kvegh.github.io/commit/3d25f3275a837967f036cbef6132b9383413354f).
-GitHub Pages built that exact revision on 2026-11-14 at 06:05:03 UTC. The
-version-controlled HTTP functional test passed all three groups against the
-actual public site at 06:05:30 UTC: homepage/catalogue/styles, archived homepage,
-and original notes URL/content. Browser rendering remains unverified as agreed.
+Version 0.1.0 was published from functional source
+[`4953884`](https://github.com/kvegh/kvegh.github.io/commit/4953884deec25af4e9bccaf8abd4d6f976e72c05).
+GitHub Pages built that exact revision on 2026-11-14 at 07:34:02 UTC. The
+version-controlled HTTP test passed all four groups against the public site:
+homepage/catalogue/styles; three original screenshot PNGs, descriptions and
+first-step destinations; archived homepage; and original notes URL/content.
+First-step URL behavior was checked against current visualization source.
+Browser rendering and interactive behavior remain unverified as agreed.

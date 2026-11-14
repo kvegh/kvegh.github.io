@@ -147,4 +147,10 @@ The owner also requested the same screenshots in those three public READMEs.
 Extend the existing deployed HTTP check to verify the three image destinations,
 alt text and exact PNG bytes in addition to the existing catalogue/archive tests.
 No framework, browser installation, image transformation or schedule is added.
-Implementation and published verification references follow once available.
+Implementation: `4953884deec25af4e9bccaf8abd4d6f976e72c05`. SSH publication
+succeeded and Pages built that exact revision on 2026-11-14 at 07:34:02 UTC
+(33.762 seconds). The deployed HTTP test passed all four result groups: current
+version/author/14 repositories/styles, three exact original PNGs and first-step
+links, archived homepage, and original notes. Browser interaction/rendering is
+not claimed; first-step fragment behavior was verified from current public
+initialization code.
