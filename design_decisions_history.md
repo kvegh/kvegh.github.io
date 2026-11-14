@@ -72,5 +72,34 @@ The approved catalogue identified an embedded Mermaid review-process diagram.
 Add a separate, accurately labelled Process diagram link to that public README
 section, alongside the repository link. It is not described as an interactive
 walkthrough. Version 0.0.3 records this presentation correction; no schedule,
-script or dependency was added. Implementation reference and final deployed
-validation will follow after the commit exists.
+script or dependency was added. Implementation: `a282be7083ac82316d45e1d1182bbb0f7e05edea`. Pages built
+that exact source at 05:54:22 UTC (36.441 seconds).
+
+
+## 2026-11-14 — Published functional verification
+
+At 05:54:59 UTC, `python3 -B tests/test_site.py --base-url
+https://kvegh.github.io/` exited zero against the actual public site, version
+0.0.3, functional revision `a282be7083ac82316d45e1d1182bbb0f7e05edea`.
+All three result groups passed: homepage author/version/14 distinct repositories/
+selected Windows link/navigation/styles; archived homepage content and notes
+destination; original rendered notes and preserved reference URL. The test's
+recorded execution duration was 0.721 seconds. Source preservation also confirmed
+exact archived README and unchanged original notes relative to `14ecf44`.
+
+The test-expectation correction is
+`65bda9742b202efb5815dac7a780d3927397f97c`; its Pages build completed at
+05:52:02 UTC (30.399 seconds). Initial homepage implementation remains
+`616cf95e707f4e60b117d20d110aa7ce047ce703`. This final entry records evidence;
+it does not change the tested HTML, CSS or test.
+
+The exact first failed-test time was not captured. The known investigation
+window from 05:49:33 UTC to successful verification was 5 minutes 26 seconds.
+Active effort versus native-approval and publication waiting was not separately
+measured. The original issue was a test assumption about legacy Markdown
+rendering, resolved without changing the historical notes.
+
+No scheduled discovery, GitHub Actions workflow, notification issue, new service
+or dependency was added. Browser visual checks remain unperformed by explicit
+owner choice. HTTP acceptance does not establish observed desktop/mobile layout
+or functionality of the linked AAP projects.
