@@ -24,10 +24,19 @@ WINDOWS_VISUALIZATION = (
 )
 
 
+PREVIEWS = {
+    "/assets/thumbnails/aap-autodeploy.png": "https://kvegh.github.io/aap_autodeploy_configascode/#separation",
+    "/assets/thumbnails/aiops-selfhealing.png": "https://kvegh.github.io/aiops-selfhealing-demo/#step=1",
+    "/assets/thumbnails/windows-patching.png": WINDOWS_VISUALIZATION,
+}
+
+
 class Page(HTMLParser):
     def __init__(self, source):
         super().__init__(convert_charrefs=True)
         self.links = []
+        self.images = []
+        self.current_link = None
         self.styles = []
         self.ids = set()
         self.text = []
@@ -44,15 +53,20 @@ class Page(HTMLParser):
             self.current_article = []
             self.articles.append(self.current_article)
         if tag == "a" and "href" in attributes:
+            self.current_link = attributes["href"]
             self.links.append(attributes["href"])
             if self.current_article is not None:
                 self.current_article.append(attributes["href"])
+        if tag == "img":
+            self.images.append((attributes, self.current_link))
         if tag == "link" and attributes.get("rel") == "stylesheet":
             self.styles.append(attributes["href"])
         if tag == "meta" and attributes.get("name") == "site-version":
             self.version = attributes.get("content")
 
     def handle_endtag(self, tag):
+        if tag == "a":
+            self.current_link = None
         if tag == "article":
             self.current_article = None
 
@@ -63,7 +77,7 @@ class Page(HTMLParser):
         return " ".join(" ".join(self.text).split())
 
 
-def fetch(base_url, path):
+def fetch_bytes(base_url, path):
     request = Request(urljoin(base_url, path), headers={
         "User-Agent": "AAP-project-showcase-functional-test",
         "Cache-Control": "no-cache",
@@ -71,7 +85,11 @@ def fetch(base_url, path):
     with urlopen(request, timeout=25) as response:
         if response.status != 200:
             raise AssertionError(f"{path}: unexpected HTTP {response.status}")
-        return response.read().decode("utf-8")
+        return response.read()
+
+
+def fetch(base_url, path):
+    return fetch_bytes(base_url, path).decode("utf-8")
 
 
 def require(condition, message):
@@ -106,6 +124,19 @@ def verify(base_url):
     require(any(urlsplit(urljoin(base_url, link)).path.rstrip("/") == "/archive"
                 for link in homepage.links), "Homepage archive link missing")
     print(f"PASS homepage: version {version}, author, 14 distinct projects, links and styles")
+
+    images = {attributes.get("src"): (attributes, link) for attributes, link in homepage.images}
+    require(len(homepage.images) == 3 and set(images) == set(PREVIEWS), "Expected three project thumbnails")
+    for source, destination in PREVIEWS.items():
+        attributes, link = images[source]
+        require(link == destination, f"Incorrect first-step thumbnail destination: {source}")
+        require(bool(attributes.get("alt", "").strip()), f"Missing thumbnail description: {source}")
+        require(attributes.get("loading") == "lazy", f"Thumbnail should load lazily: {source}")
+        data = fetch_bytes(base_url, source)
+        require(data.startswith(b"\x89PNG\r\n\x1a\n"), f"Thumbnail is not a PNG: {source}")
+        expected = (Path(__file__).resolve().parents[1] / source.lstrip("/")).read_bytes()
+        require(data == expected, f"Published thumbnail differs from supplied screenshot: {source}")
+    print("PASS thumbnails: three original screenshots, descriptions and first-step links")
 
     archive = Page(fetch(base_url, "archive/"))
     require("@kvegh's stuff here." in archive.visible_text(), "Old homepage text missing")

@@ -128,3 +128,23 @@ from 06:04:26 to 06:05:03 UTC (37.243 seconds). At 06:05:30 UTC the existing
 HTTP functional test passed all three result groups against the public site,
 version 0.0.4, in 0.725 seconds. This records HTTP/source verification; visual
 browser behavior remains unobserved under the owner's existing choice.
+
+
+## 2026-11-14 — Supplied visualization thumbnails
+
+The owner supplied three screenshots and asked for clickable thumbnails on the
+respective AutoDeploy, AIOps and Windows project entries. Preserve the original
+PNG bytes, contain each whole image in a small responsive preview (maximum
+320px wide), include descriptive alternative text and lazy-load the images.
+This is a minor feature, version 0.1.0, using existing HTML/CSS and static assets.
+
+The screenshots depict later stages, but each link must open the beginning.
+Current public initialization code confirms supported first-step destinations:
+AutoDeploy `#separation`, AIOps `#step=1`, and the bare Windows AAP-edition URL
+which initializes stage zero. No unsupported query parameter was introduced.
+The owner also requested the same screenshots in those three public READMEs.
+
+Extend the existing deployed HTTP check to verify the three image destinations,
+alt text and exact PNG bytes in addition to the existing catalogue/archive tests.
+No framework, browser installation, image transformation or schedule is added.
+Implementation and published verification references follow once available.

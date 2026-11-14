@@ -6,12 +6,15 @@ lead the page; a small adjacent introduction supplies the author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.0.4
+**Current homepage version:** 0.1.0
 
 The catalogue follows the public
 [AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).
 It lists its 14 projects with short descriptions, repository links and available
-visualizations. Plans are described as plans: in particular, scanning and
+visualizations. AutoDeploy, AIOps and Windows also have small, uncropped screenshot
+links that open the first step. The screenshots themselves show later stages.
+AutoDeploy uses its supported `#separation` fragment, AIOps uses `#step=1`, and
+Windows starts at stage zero on a fresh visit to its canonical URL. Plans are described as plans: in particular, scanning and
 extracting configuration from running AAP instances is an AutoDeploy aim.
 The Windows visualization uses the approved
 [AAP edition](https://kvegh.github.io/disconnected-windows-patching/demo-with-aap/).
@@ -21,6 +24,7 @@ Screenshots and embedded diagrams are distinguished from interactive walkthrough
 
 - `index.html`: complete homepage content; works without JavaScript.
 - `assets/site.css`: responsive layout and presentation; no external font service.
+- `assets/thumbnails/`: the three owner-supplied PNG screenshots, preserved unchanged.
 - `VERSION`: authoritative numeric homepage version, also present in page metadata.
 - `archive/index.html`: the previous homepage content with its original notes link.
 - `archive/README.md`: byte-identical original homepage source from `14ecf44`.
@@ -59,7 +63,9 @@ python3 -B tests/test_site.py --base-url https://kvegh.github.io/
 The test fetches the real homepage, linked stylesheet, archive and original notes
 URL. It checks version metadata, the author and role, all 14 distinct project
 repository links, the selected Windows visualization, section navigation, original
-homepage content and the preserved notes/reference URL. It prints `PASS` lines
+homepage content and the preserved notes/reference URL. It also verifies all three
+thumbnail destinations, descriptions and served PNG bytes against the supplied
+originals in this checkout. It prints `PASS` lines
 and exits zero on success; any failed assertion or HTTP/TLS error exits nonzero.
 The test is read-only and safe to repeat. It does not exercise project demos,
 access AAP or change any remote resource. Checks of external project destinations
