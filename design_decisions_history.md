@@ -211,5 +211,8 @@ No image transformation, new layout or dependency is needed.
 
 Homepage patch version 0.2.1 adds the image and extends the existing deployed
 HTTP check to verify six original screenshots and their destinations. This
-changes only the portfolio repository. Implementation commit and publication
-evidence will be recorded after committing and verifying the update.
+changes only the portfolio repository. Implementation: fd1ac9814833f15d3a8c50b84c3b7cc0fa9375b1.
+GitHub Pages built this source from 17:03:42 to 17:04:17 UTC on 2026-11-14.
+The deployed HTTP check passed all four groups: 16 grouped projects and styles,
+six exact original image files with their destinations, archive and original
+notes. Browser rendering remains unverified under the existing owner choice.

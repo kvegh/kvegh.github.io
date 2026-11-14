@@ -118,3 +118,9 @@ version-controlled HTTP test passed all four groups against the public site:
 original screenshot files, descriptions and intended destinations; archived
 homepage; and original notes URL/content. First-step behavior was checked
 against visualization source. Browser rendering and interaction remain unverified.
+
+Version 0.2.1 adds the Vortex Panic screenshot from functional source
+[fd1ac98](https://github.com/kvegh/kvegh.github.io/commit/fd1ac9814833f15d3a8c50b84c3b7cc0fa9375b1).
+GitHub Pages built it on 2026-11-14 at 17:04:17 UTC. The same deployed HTTP
+check passed all four groups, including all six original images and their
+intended destinations. Browser rendering remains unverified.
