@@ -198,5 +198,4 @@ claim new runtime acceptance for that project.
 Version 0.2.0 records this content-structure feature within the existing static
 HTML/CSS design. Extend the deployed HTTP check to verify 16 projects, their
 two-section placement and the top jump destinations. No new framework, service,
-schedule, browser installation or remote-system access is added. Implementation
-and deployed verification references follow after commit.
+schedule, browser installation or remote-system access is added. Implementation: 4917fb591b3aa64c280a6216be2469877abef79b. SSH publication succeeded; Pages built this exact source from 08:01:07 to 08:01:42 UTC on 2026-11-14 (35.649 seconds). The deployed HTTP check passed all16 approved project placements, both jump links, all5 original image bytes/destinations, archive and retained notes. Test completion time was not separately captured; the successful result was collected after the 08:02:59 UTC launch observation. Browser rendering remains unverified as agreed.
