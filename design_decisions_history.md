@@ -199,3 +199,17 @@ Version 0.2.0 records this content-structure feature within the existing static
 HTML/CSS design. Extend the deployed HTTP check to verify 16 projects, their
 two-section placement and the top jump destinations. No new framework, service,
 schedule, browser installation or remote-system access is added. Implementation: 4917fb591b3aa64c280a6216be2469877abef79b. SSH publication succeeded; Pages built this exact source from 08:01:07 to 08:01:42 UTC on 2026-11-14 (35.649 seconds). The deployed HTTP check passed all16 approved project placements, both jump links, all5 original image bytes/destinations, archive and retained notes. Test completion time was not separately captured; the successful result was collected after the 08:02:59 UTC launch observation. Browser rendering remains unverified as agreed.
+
+
+## 2026-11-14 — Vortex Panic screenshot thumbnail
+
+The owner supplied a Vortex Panic screenshot and requested the same thumbnail
+size as the existing previews, clickable to view. Preserve the exact original
+PNG and reuse the existing 320-pixel, whole-image thumbnail style. Clicking
+opens the full-size screenshot; the separate simulation link remains available.
+No image transformation, new layout or dependency is needed.
+
+Homepage patch version 0.2.1 adds the image and extends the existing deployed
+HTTP check to verify six original screenshots and their destinations. This
+changes only the portfolio repository. Implementation commit and publication
+evidence will be recorded after committing and verifying the update.

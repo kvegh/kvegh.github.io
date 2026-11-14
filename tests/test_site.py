@@ -26,6 +26,7 @@ WINDOWS_VISUALIZATION = (
 
 
 PREVIEWS = {
+    "/assets/thumbnails/vortex-panic.png": "/assets/thumbnails/vortex-panic.png",
     "/assets/thumbnails/aap-autodeploy.png": "https://kvegh.github.io/aap_autodeploy_configascode/#separation",
     "/assets/thumbnails/aiops-selfhealing.png": "https://kvegh.github.io/aiops-selfhealing-demo/#step=1",
     "/assets/thumbnails/windows-patching.png": WINDOWS_VISUALIZATION,

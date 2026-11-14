@@ -7,7 +7,7 @@ author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.2.0
+**Current homepage version:** 0.2.1
 
 The catalogue has two sections, with jump links at the top:
 
@@ -20,7 +20,8 @@ The catalogue has two sections, with jump links at the top:
 All 16 entries link to their repositories. AutoDeploy, AIOps and Windows use
 the three supplied screenshot thumbnails and supported first-step visualization
 links. CCNG has laptop/mobile previews that open the full-size screenshots.
-Vortex Panic links to its existing playable GitHub Pages simulation. No
+Vortex Panic has a matching thumbnail that opens the full-size supplied screenshot,
+alongside its existing playable GitHub Pages simulation link. No
 Assistant Team visualization was identified; its repository link is provided.
 
 Plans remain labelled as plans, including AutoDeploy's scan-and-extract aim.
@@ -70,7 +71,7 @@ python3 -B tests/test_site.py --base-url https://kvegh.github.io/
 The test fetches the real homepage, linked stylesheet, archive and original notes
 URL. It checks version metadata, the author and role, all 16 distinct project
 repository links and their two-section placement, the selected Windows visualization, section navigation, original
-homepage content and the preserved notes/reference URL. It also verifies all five
+homepage content and the preserved notes/reference URL. It also verifies all six
 thumbnail destinations, descriptions and served PNG/JPEG bytes against their
 originals in this checkout. It prints `PASS` lines
 and exits zero on success; any failed assertion or HTTP/TLS error exits nonzero.
