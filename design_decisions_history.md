@@ -174,3 +174,29 @@ The deployed HTTP check now expects five previews and supports PNG/JPEG image
 bytes. No browser, image generator, framework or scheduled task is introduced.
 Original three visualization destinations remain the supported first-step URLs.
 Implementation: c8bbd68bc53b5ddd99bde7cedf2347ce06ba5bfd. Pages built that exact source on 2026-11-14 at 07:50:43 UTC (39.704 seconds). The deployed HTTP test passed all four groups, including five exact original PNG/JPEG images and their intended destinations, plus catalogue/styles/archive/notes. Browser rendering remains unverified under the existing owner choice.
+
+
+## 2026-11-14 — Two sections for a broader personal portfolio
+
+The owner explicitly requested Advanced AAP usecases and Random code musings,
+with top jump links and the existing understated appearance. Keep the small
+author introduction while making the page's title and description about code
+projects more broadly.
+
+Move the existing CCNG entry into the second section and add the explicitly
+selected Vortex Panic and Assistant Team projects. The owner confirmed all
+three through the structured choice. Retain the 13 other AAP/supporting
+projects and all five existing screenshot previews, destinations and original
+image bytes. The owner clarified that Hetzner redeploy is not a separate
+project yet; do not add it. No placeholder repositories or forks are included.
+
+Vortex Panic is a browser-based space-travel experiment. Its public Pages
+configuration confirms the existing playable page is built. Assistant Team's
+public README supports the multi-agent workspace description; this does not
+claim new runtime acceptance for that project.
+
+Version 0.2.0 records this content-structure feature within the existing static
+HTML/CSS design. Extend the deployed HTTP check to verify 16 projects, their
+two-section placement and the top jump destinations. No new framework, service,
+schedule, browser installation or remote-system access is added. Implementation
+and deployed verification references follow after commit.

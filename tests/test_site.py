@@ -18,6 +18,7 @@ PROJECTS = {
     "ServiceNow-ITSM-Integration", "intelligent-assistant",
     "automation_portal_setup", "Automation_Dashboard", "CMDB-for-AAP",
     "command-center-ng", "Agent_generated_code_review",
+    "vortex-panic", "assistant-team",
 }
 WINDOWS_VISUALIZATION = (
     "https://kvegh.github.io/disconnected-windows-patching/demo-with-aap/"
@@ -43,6 +44,8 @@ class Page(HTMLParser):
         self.ids = set()
         self.text = []
         self.articles = []
+        self.article_sections = []
+        self.current_section = None
         self.current_article = None
         self.version = None
         self.feed(source)
@@ -51,9 +54,12 @@ class Page(HTMLParser):
         attributes = dict(attributes)
         if "id" in attributes:
             self.ids.add(attributes["id"])
+        if tag == "section":
+            self.current_section = attributes.get("id")
         if tag == "article":
             self.current_article = []
             self.articles.append(self.current_article)
+            self.article_sections.append(self.current_section)
         if tag == "a" and "href" in attributes:
             self.current_link = attributes["href"]
             self.links.append(attributes["href"])
@@ -67,6 +73,8 @@ class Page(HTMLParser):
             self.version = attributes.get("content")
 
     def handle_endtag(self, tag):
+        if tag == "section":
+            self.current_section = None
         if tag == "a":
             self.current_link = None
         if tag == "article":
@@ -106,12 +114,16 @@ def verify(base_url):
     require(homepage.version == version, "Published version differs from checkout VERSION")
     require(all(name in text for name in ("Karoly", "Charlie", "Vegh")), "Author name missing")
     require("Ansible Solution Architect" in text, "Author role missing")
-    require(len(homepage.articles) == len(PROJECTS), "Expected 14 project entries")
+    require(len(homepage.articles) == len(PROJECTS), f"Expected {len(PROJECTS)} project entries")
     expected = {f"https://github.com/kvegh/{name}" for name in PROJECTS}
     found = []
-    for links in homepage.articles:
+    random_projects = {"vortex-panic", "command-center-ng", "assistant-team"}
+    for links, section in zip(homepage.articles, homepage.article_sections):
         repositories = [link.rstrip("/") for link in links if link.rstrip("/") in expected]
         require(len(repositories) == 1, "Each project must link its own repository once")
+        project = repositories[0].rsplit("/", 1)[-1]
+        expected_section = "random-code" if project in random_projects else "projects"
+        require(section == expected_section, f"Incorrect project section: {project}")
         found.extend(repositories)
     require(set(found) == expected, "Project repositories missing or duplicated")
     require(WINDOWS_VISUALIZATION in homepage.links, "Canonical Windows visualization missing")
@@ -120,12 +132,14 @@ def verify(base_url):
     for link in homepage.links:
         if link.startswith("#"):
             require(link[1:] in homepage.ids, f"Broken section link: {link}")
+    require({"#advanced-aap", "#random-code"}.issubset(set(homepage.links)),
+            "Both project-section jump links are required")
     require(homepage.styles, "Stylesheet link missing")
     for style in homepage.styles:
         require(bool(fetch(base_url, style).strip()), f"Empty stylesheet: {style}")
     require(any(urlsplit(urljoin(base_url, link)).path.rstrip("/") == "/archive"
                 for link in homepage.links), "Homepage archive link missing")
-    print(f"PASS homepage: version {version}, author, 14 distinct projects, links and styles")
+    print(f"PASS homepage: version {version}, author, {len(PROJECTS)} grouped projects, links and styles")
 
     images = {attributes.get("src"): (attributes, link) for attributes, link in homepage.images}
     require(len(homepage.images) == len(PREVIEWS) and set(images) == set(PREVIEWS),

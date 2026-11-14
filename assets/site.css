@@ -35,7 +35,9 @@ h1, h2, h3 { text-wrap: balance; }
 .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 1fr); gap: 56px; align-items: start; padding-block: 48px; }
 .intro h1 { margin-bottom: 14px; font-size: clamp(1.75rem, 3.2vw, 2.4rem); font-weight: 550; line-height: 1.25; letter-spacing: -0.035em; }
 .intro-description { max-width: 650px; color: var(--muted); font-size: 0.96rem; line-height: 1.8; }
-.intro-links { margin-top: 18px; }
+.intro-links { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 18px; }
+.intro-links .text-link { padding: 9px 12px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
+.intro-links .text-link:hover { border-color: var(--red); }
 .text-link { display: inline-flex; align-items: center; gap: 9px; font-size: 0.82rem; font-weight: 600; }
 .text-link span { color: var(--red); }
 .author-intro { padding-left: 24px; border-left: 1px solid var(--rule); scroll-margin-top: 24px; }
@@ -44,6 +46,7 @@ h1, h2, h3 { text-wrap: balance; }
 .author-intro .role { margin-top: 3px; font-size: 0.82rem; }
 
 .projects-section { padding-block: 36px 52px; border-block: 1px solid var(--rule); background: var(--surface); scroll-margin-top: 24px; }
+.projects-section + .projects-section { border-top: 0; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 48px; margin-bottom: 28px; }
 h2 { margin-top: 12px; font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 570; line-height: 1.16; letter-spacing: -0.045em; }
 .section-heading > p { max-width: 340px; padding-bottom: 2px; font-size: 0.9rem; line-height: 1.8; color: var(--muted); }

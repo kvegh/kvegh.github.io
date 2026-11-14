@@ -1,26 +1,30 @@
-# Karoly “Charlie” Vegh — Ansible automation projects
+# Karoly “Charlie” Vegh — Projects and code
 
 A personal project showcase for Karoly “Charlie” Vegh, Ansible Solution Architect,
-focused on practical Red Hat Ansible Automation Platform use cases. The projects
-lead the page; a small adjacent introduction supplies the author name and role.
+covering advanced Ansible Automation Platform use cases alongside other code
+projects. The projects lead the page; a small adjacent introduction supplies the
+author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.1.1
+**Current homepage version:** 0.2.0
 
-The catalogue follows the public
-[AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).
-It lists its 14 projects with short descriptions, repository links and available
-visualizations. AutoDeploy, AIOps and Windows also have small, uncropped screenshot
-links that open the first step. The screenshots themselves show later stages.
-AutoDeploy uses its supported `#separation` fragment, AIOps uses `#step=1`, and
-Windows starts at stage zero on a fresh visit to its canonical URL. CCNG has
-separate laptop and mobile thumbnails that open the original full-size images;
-they are screenshots, rather than an interactive walkthrough. Plans are described as plans: in particular, scanning and
-extracting configuration from running AAP instances is an AutoDeploy aim.
-The Windows visualization uses the approved
-[AAP edition](https://kvegh.github.io/disconnected-windows-patching/demo-with-aap/).
-Screenshots and embedded diagrams are distinguished from interactive walkthroughs.
+The catalogue has two sections, with jump links at the top:
+
+- **Advanced AAP usecases**: 13 AAP and supporting automation projects drawn from
+  the public [AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).
+- **Random code musings**: the owner-selected Vortex Panic, Command Center NG and
+  Assistant Team projects. Hetzner redeploy is not a separate showcase project
+  yet and is intentionally omitted.
+
+All 16 entries link to their repositories. AutoDeploy, AIOps and Windows use
+the three supplied screenshot thumbnails and supported first-step visualization
+links. CCNG has laptop/mobile previews that open the full-size screenshots.
+Vortex Panic links to its existing playable GitHub Pages simulation. No
+Assistant Team visualization was identified; its repository link is provided.
+
+Plans remain labelled as plans, including AutoDeploy's scan-and-extract aim.
+The Windows visualization retains the approved AAP-edition URL.
 
 ## Structure and publishing
 
@@ -64,8 +68,8 @@ python3 -B tests/test_site.py --base-url https://kvegh.github.io/
 ```
 
 The test fetches the real homepage, linked stylesheet, archive and original notes
-URL. It checks version metadata, the author and role, all 14 distinct project
-repository links, the selected Windows visualization, section navigation, original
+URL. It checks version metadata, the author and role, all 16 distinct project
+repository links and their two-section placement, the selected Windows visualization, section navigation, original
 homepage content and the preserved notes/reference URL. It also verifies all five
 thumbnail destinations, descriptions and served PNG/JPEG bytes against their
 originals in this checkout. It prints `PASS` lines
@@ -85,7 +89,7 @@ not claimed for this static website.
 The owner explicitly rejected scheduled GitHub Actions checks. Perform discovery
 **only when the owner instructs it**; do not add schedules or issue notifications.
 
-1. Read the current umbrella project list and each relevant public project's
+1. Read the current umbrella list and the explicitly selected other projects'
    documentation and public visualization source. Do not infer a published page
    solely from a conventional `github.io` address or the presence of HTML files.
 2. Verify the documented public destination and distinguish interactive
