@@ -5,7 +5,7 @@ focused on practical Red Hat Ansible Automation Platform use cases.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.0.2
+**Current homepage version:** 0.0.3
 
 The catalogue follows the public
 [AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).

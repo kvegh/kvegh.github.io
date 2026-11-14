@@ -49,7 +49,7 @@ Correct the test to require the preserved reference URL as text or a link.
 Version 0.0.2 records this supporting-code patch, with matching page metadata and
 documentation. The first failed-test timestamp and active/waiting split were not
 captured. Full deployed re-verification is pending at this entry. The correction
-commit will be recorded after it exists.
+commit is `65bda9742b202efb5815dac7a780d3927397f97c`.
 
 ## Historical source reconstruction — 2020
 
@@ -64,3 +64,13 @@ undocumented architectural rationale. Commit author timestamps use `+01:00`.
 
 The original rationale and any approvals for these historical changes are
 unknown. Their implementation is evidenced by the named commits.
+
+
+### Direct process-diagram link — 2026-11-14
+
+The approved catalogue identified an embedded Mermaid review-process diagram.
+Add a separate, accurately labelled Process diagram link to that public README
+section, alongside the repository link. It is not described as an interactive
+walkthrough. Version 0.0.3 records this presentation correction; no schedule,
+script or dependency was added. Implementation reference and final deployed
+validation will follow after the commit exists.
