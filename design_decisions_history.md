@@ -173,4 +173,4 @@ extends the existing thumbnail presentation, patch version 0.1.1.
 The deployed HTTP check now expects five previews and supports PNG/JPEG image
 bytes. No browser, image generator, framework or scheduled task is introduced.
 Original three visualization destinations remain the supported first-step URLs.
-Implementation reference and final deployed verification follow after commit.
+Implementation: c8bbd68bc53b5ddd99bde7cedf2347ce06ba5bfd. Pages built that exact source on 2026-11-14 at 07:50:43 UTC (39.704 seconds). The deployed HTTP test passed all four groups, including five exact original PNG/JPEG images and their intended destinations, plus catalogue/styles/archive/notes. Browser rendering remains unverified under the existing owner choice.
