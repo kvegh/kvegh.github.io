@@ -1,11 +1,12 @@
 # Karoly “Charlie” Vegh — Ansible automation projects
 
 A personal project showcase for Karoly “Charlie” Vegh, Ansible Solution Architect,
-focused on practical Red Hat Ansible Automation Platform use cases.
+focused on practical Red Hat Ansible Automation Platform use cases. The projects
+lead the page; a small adjacent introduction supplies the author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.0.3
+**Current homepage version:** 0.0.4
 
 The catalogue follows the public
 [AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).
@@ -82,7 +83,7 @@ The owner explicitly rejected scheduled GitHub Actions checks. Perform discovery
    walkthroughs, screenshots, diagrams and actual application dashboards.
 3. Update the relevant homepage link and concise description only from evidence.
    Retain the approved Windows AAP-edition link unless the owner changes it.
-4. Advance `VERSION` and matching homepage metadata, update this README and the
+4. Advance `VERSION`, matching homepage metadata and the stylesheet version query, update this README and the
    decision history, and run the deployed-site test after normal publication.
 
 ## Preservation and recovery

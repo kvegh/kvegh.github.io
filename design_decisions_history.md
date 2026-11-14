@@ -103,3 +103,19 @@ No scheduled discovery, GitHub Actions workflow, notification issue, new service
 or dependency was added. Browser visual checks remain unperformed by explicit
 owner choice. HTTP acceptance does not establish observed desktop/mobile layout
 or functionality of the linked AAP projects.
+
+
+## 2026-11-14 — Put projects first and reduce author prominence
+
+The owner found the personal heading too large and asked for modest presentation:
+focus on the projects, with a humble author introduction beside them. Use a
+compact project-led heading and a small adjacent name/role block. Remove the
+oversized personal hero, decorative platform figure and repeated bottom biography;
+reduce introductory spacing so the project list starts sooner. Keep all 14
+project descriptions, repository/visualization links and archive behavior.
+
+This is the owner's requested presentation correction within the approved static
+HTML/CSS design, version 0.0.4. No framework, schedule or browser installation
+is introduced. Browser rendering remains unverified under the existing owner
+choice. Implementation commit and actual deployed verification will be recorded
+after they are available.
