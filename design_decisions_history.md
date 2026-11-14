@@ -117,5 +117,14 @@ project descriptions, repository/visualization links and archive behavior.
 This is the owner's requested presentation correction within the approved static
 HTML/CSS design, version 0.0.4. No framework, schedule or browser installation
 is introduced. Browser rendering remains unverified under the existing owner
-choice. Implementation commit and actual deployed verification will be recorded
-after they are available.
+choice. Implementation: `3d25f3275a837967f036cbef6132b9383413354f`.
+The stylesheet URL includes the matching version query so previously cached
+CSS does not hide the layout change. Independent source review confirmed the
+14 project entries and their links remained byte-identical, with archive and
+original notes untouched.
+
+SSH publication succeeded, and Pages built the exact revision on 2026-11-14
+from 06:04:26 to 06:05:03 UTC (37.243 seconds). At 06:05:30 UTC the existing
+HTTP functional test passed all three result groups against the public site,
+version 0.0.4, in 0.725 seconds. This records HTTP/source verification; visual
+browser behavior remains unobserved under the owner's existing choice.

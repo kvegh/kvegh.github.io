@@ -96,9 +96,9 @@ revert to roll back a future site change; do not rewrite historical commits.
 
 ## Verified publication
 
-Version 0.0.3 was published from functional source
-[`a282be7`](https://github.com/kvegh/kvegh.github.io/commit/a282be7083ac82316d45e1d1182bbb0f7e05edea).
-GitHub Pages built that exact revision on 2026-11-14 at 05:54:22 UTC. The
+Version 0.0.4 was published from functional source
+[`3d25f32`](https://github.com/kvegh/kvegh.github.io/commit/3d25f3275a837967f036cbef6132b9383413354f).
+GitHub Pages built that exact revision on 2026-11-14 at 06:05:03 UTC. The
 version-controlled HTTP functional test passed all three groups against the
-actual public site at 05:54:59 UTC: homepage/catalogue/styles, archived homepage,
+actual public site at 06:05:30 UTC: homepage/catalogue/styles, archived homepage,
 and original notes URL/content. Browser rendering remains unverified as agreed.
