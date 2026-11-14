@@ -5,7 +5,7 @@ focused on practical Red Hat Ansible Automation Platform use cases.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.0.1
+**Current homepage version:** 0.0.2
 
 The catalogue follows the public
 [AAP Advanced Features umbrella](https://github.com/kvegh/AAP-advanced-features).
@@ -58,7 +58,7 @@ python3 -B tests/test_site.py --base-url https://kvegh.github.io/
 The test fetches the real homepage, linked stylesheet, archive and original notes
 URL. It checks version metadata, the author and role, all 14 distinct project
 repository links, the selected Windows visualization, section navigation, original
-homepage content and the preserved notes/reference link. It prints `PASS` lines
+homepage content and the preserved notes/reference URL. It prints `PASS` lines
 and exits zero on success; any failed assertion or HTTP/TLS error exits nonzero.
 The test is read-only and safe to repeat. It does not exercise project demos,
 access AAP or change any remote resource. Checks of external project destinations

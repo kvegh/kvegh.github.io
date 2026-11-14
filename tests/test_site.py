@@ -118,9 +118,10 @@ def verify(base_url):
     notes = Page(fetch(base_url, notes_path))
     require("Stuff I Looked Up" in notes.visible_text(), "Original notes page is not rendered")
     require("Blogger tables" in notes.visible_text(), "Original notes table missing")
-    require(any("adding-a-new-ssh-key-to-your-github-account" in link for link in notes.links),
-            "Original notes reference link missing")
-    print("PASS legacy notes: original public URL, notes table and external reference")
+    require("adding-a-new-ssh-key-to-your-github-account" in notes.visible_text()
+            or any("adding-a-new-ssh-key-to-your-github-account" in link for link in notes.links),
+            "Original notes reference URL missing")
+    print("PASS legacy notes: original public URL, notes table and reference URL")
 
 
 if __name__ == "__main__":

@@ -34,8 +34,22 @@ archived at `/archive/`.
   to proceed without browser checks rather than download Chromium. Do not
   install it; report visual rendering as unverified.
 
-Implementation commit: pending at the time of this entry; record the exact
-commit and validation result in a follow-up documentation commit.
+Initial implementation: `616cf95e707f4e60b117d20d110aa7ce047ce703` (0.0.1),
+published over SSH. Pages built the exact revision at 05:48:51 UTC after a
+45.027-second build. Homepage and archive HTTP assertions passed.
+
+### Deployed-test correction — 2026-11-14
+
+The initial HTTP test assumed the original notes reference URL would render as
+an HTML link. Bounded inspection beginning at 05:49:33 UTC confirmed the existing
+renderer preserves it as plain text. The original notes source is byte-identical
+to `14ecf44`; do not change that historical content to satisfy the test.
+
+Correct the test to require the preserved reference URL as text or a link.
+Version 0.0.2 records this supporting-code patch, with matching page metadata and
+documentation. The first failed-test timestamp and active/waiting split were not
+captured. Full deployed re-verification is pending at this entry. The correction
+commit will be recorded after it exists.
 
 ## Historical source reconstruction — 2020
 
