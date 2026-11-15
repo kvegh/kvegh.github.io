@@ -227,4 +227,10 @@ to the existing project summary, with a brief nod to The Hitchhiker’s Guide to
 the Galaxy. Keep the summary at three sentences, preserving the existing
 thumbnail, repository and simulation links. Homepage patch version0.2.2 records
 this text-only correction. No new layout, dependency or scheduled work is added.
-Implementation and publication checks will be recorded after committing.
+Implementation: 000a82d9b9d9970ba00e8e50943d4631e3093b32. GitHub Pages
+built this exact source on 2026-11-15 from 14:13:06 to 14:13:37 UTC. The
+existing deployed HTTP check passed all four groups: 16 grouped projects and
+styles, six exact original screenshots with their destinations, archive and
+original notes. A focused HTTP check also confirmed the exact expansion and
+book reference, with deployed HTML byte-identical to the committed source.
+Browser appearance remains unverified under the existing owner choice.
