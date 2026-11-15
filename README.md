@@ -7,7 +7,7 @@ author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.2.1
+**Current homepage version:** 0.2.2
 
 The catalogue has two sections, with jump links at the top:
 
@@ -21,7 +21,8 @@ All 16 entries link to their repositories. AutoDeploy, AIOps and Windows use
 the three supplied screenshot thumbnails and supported first-step visualization
 links. CCNG has laptop/mobile previews that open the full-size screenshots.
 Vortex Panic has a matching thumbnail that opens the full-size supplied screenshot,
-alongside its existing playable GitHub Pages simulation link. No
+alongside its existing playable GitHub Pages simulation link. Its entry includes
+the owner-provided VORTEX PANIC expansion and a Hitchhiker’s Guide reference. No
 Assistant Team visualization was identified; its repository link is provided.
 
 Plans remain labelled as plans, including AutoDeploy's scan-and-extract aim.

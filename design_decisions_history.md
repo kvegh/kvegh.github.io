@@ -216,3 +216,15 @@ GitHub Pages built this source from 17:03:42 to 17:04:17 UTC on 2026-11-14.
 The deployed HTTP check passed all four groups: 16 grouped projects and styles,
 six exact original image files with their destinations, archive and original
 notes. Browser rendering remains unverified under the existing owner choice.
+
+
+## 2026-11-15 14:11 UTC — Explain the Vortex Panic name
+
+The owner supplied the full expansion: Vastly Overambitious Relativistic Travel
+EXperience with Proportional AstroNavigation Illustrating Cosmic-insignificance,
+and noted the Hitchhiker’s Guide references. Add that exact wording and case
+to the existing project summary, with a brief nod to The Hitchhiker’s Guide to
+the Galaxy. Keep the summary at three sentences, preserving the existing
+thumbnail, repository and simulation links. Homepage patch version0.2.2 records
+this text-only correction. No new layout, dependency or scheduled work is added.
+Implementation and publication checks will be recorded after committing.
