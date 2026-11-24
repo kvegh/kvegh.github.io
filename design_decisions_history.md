@@ -255,3 +255,22 @@ including the new visualization link within the correct project entry and the
 six existing screenshot files. Independent read-only review found no blockers.
 Screenshot addition remains awaiting the original image file; no substitute was
 published.
+
+
+## 2026-11-24 09:17 CET — Add the supplied sniperpatching preview
+
+The owner supplied a walkthrough screenshot and asked to add it to the homepage.
+The initial search for a separate uploaded file missed the image embedded in
+the saved chat message; the original PNG was subsequently recovered unchanged
+and visually confirmed (1811 by 998 pixels). This resolves the earlier file
+availability gap without requiring another upload. No chat application source
+or settings were changed.
+
+Use the existing project-preview style and link the screenshot to the
+walkthrough's beginning, retaining the separate Repository and Visualization
+text links. Preserve the original image bytes without cropping or regeneration.
+Homepage patch version 0.2.4 adds this supplied asset and extends the existing
+deployed HTTP check to require seven original screenshots and the two
+walkthrough links in the RHEL entry. No new layout, dependency or browser
+installation is needed. Browser rendering remains unverified.
+Implementation and publication references will follow verification.

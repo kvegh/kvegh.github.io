@@ -7,7 +7,7 @@ author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.2.3
+**Current homepage version:** 0.2.4
 
 The catalogue has two sections, with jump links at the top:
 
@@ -19,7 +19,8 @@ The catalogue has two sections, with jump links at the top:
 
 All 16 entries link to their repositories. AutoDeploy, AIOps and Windows use
 the three supplied screenshot thumbnails and supported first-step visualization
-links. RHEL Sniperpatching also links directly to its interactive walkthrough.
+links. RHEL Sniperpatching uses the supplied screenshot as a preview, linking
+to its interactive walkthrough alongside the Visualization text link.
 CCNG has laptop/mobile previews that open the full-size screenshots.
 Vortex Panic has a matching thumbnail that opens the full-size supplied screenshot,
 alongside its existing playable GitHub Pages simulation link. Its entry includes
@@ -74,7 +75,7 @@ The test fetches the real homepage, linked stylesheet, archive and original note
 URL. It checks version metadata, the author and role, all 16 distinct project
 repository links and their two-section placement, the selected Windows
 visualization, the RHEL Sniperpatching walkthrough in its own project entry,
-section navigation, original homepage content and the preserved notes/reference URL. It also verifies all six
+section navigation, original homepage content and the preserved notes/reference URL. It also verifies all seven
 thumbnail destinations, descriptions and served PNG/JPEG bytes against their
 originals in this checkout. It prints `PASS` lines
 and exits zero on success; any failed assertion or HTTP/TLS error exits nonzero.
@@ -132,5 +133,5 @@ Version 0.2.3 adds the RHEL Sniperpatching visualization link from functional
 source [262685c](https://github.com/kvegh/kvegh.github.io/commit/262685c409b8c94cbe83d6e97731345cfdfd4eba).
 GitHub Pages published that revision on 2026-11-24 at 09:11:07 CET; the deployed
 HTTP check passed all four groups, including the new link in its project entry.
-The newly supplied sniperpatching screenshot is pending access to its original
-file. Browser rendering remains unverified.
+The sniperpatching screenshot was not included in 0.2.3; version 0.2.4 adds it
+from the original chat upload. Browser rendering remains unverified.

@@ -26,6 +26,7 @@ WINDOWS_VISUALIZATION = (
 
 
 PREVIEWS = {
+    "/assets/thumbnails/rhel-sniperpatching.png": "https://kvegh.github.io/RHEL-sniperpatching/",
     "/assets/thumbnails/vortex-panic.png": "/assets/thumbnails/vortex-panic.png",
     "/assets/thumbnails/aap-autodeploy.png": "https://kvegh.github.io/aap_autodeploy_configascode/#separation",
     "/assets/thumbnails/aiops-selfhealing.png": "https://kvegh.github.io/aiops-selfhealing-demo/#step=1",
@@ -127,8 +128,8 @@ def verify(base_url):
         require(section == expected_section, f"Incorrect project section: {project}")
         found.extend(repositories)
         if project == "RHEL-sniperpatching":
-            require(links.count("https://kvegh.github.io/RHEL-sniperpatching/") == 1,
-                    "RHEL Sniperpatching entry must link its visualization once")
+            require(links.count("https://kvegh.github.io/RHEL-sniperpatching/") == 2,
+                    "RHEL Sniperpatching preview and text must link its visualization")
     require(set(found) == expected, "Project repositories missing or duplicated")
     require(WINDOWS_VISUALIZATION in homepage.links, "Canonical Windows visualization missing")
     require("https://kvegh.github.io/disconnected-windows-patching/" not in homepage.links,
