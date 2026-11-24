@@ -247,4 +247,11 @@ existing deployed HTTP test to require the destination within the correct entry.
 No browser installation is authorized; visual rendering remains unverified.
 The owner subsequently supplied a screenshot to add as this entry's preview;
 obtaining its original file is pending, so this release adds the link first.
-Implementation and publication evidence will be recorded after verification.
+Implementation: 262685c409b8c94cbe83d6e97731345cfdfd4eba. GitHub Pages run
+45353837620 (pages build and deployment) completed successfully; the Pages API
+records the exact implementation built from 09:10:34 to 09:11:07 CET. The
+version-controlled HTTP check passed all four groups against the public site,
+including the new visualization link within the correct project entry and the
+six existing screenshot files. Independent read-only review found no blockers.
+Screenshot addition remains awaiting the original image file; no substitute was
+published.

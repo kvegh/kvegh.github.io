@@ -127,3 +127,10 @@ Version 0.2.1 adds the Vortex Panic screenshot from functional source
 GitHub Pages built it on 2026-11-14 at 17:04:17 UTC. The same deployed HTTP
 check passed all four groups, including all six original images and their
 intended destinations. Browser rendering remains unverified.
+
+Version 0.2.3 adds the RHEL Sniperpatching visualization link from functional
+source [262685c](https://github.com/kvegh/kvegh.github.io/commit/262685c409b8c94cbe83d6e97731345cfdfd4eba).
+GitHub Pages published that revision on 2026-11-24 at 09:11:07 CET; the deployed
+HTTP check passed all four groups, including the new link in its project entry.
+The newly supplied sniperpatching screenshot is pending access to its original
+file. Browser rendering remains unverified.
