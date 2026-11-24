@@ -126,6 +126,9 @@ def verify(base_url):
         expected_section = "random-code" if project in random_projects else "projects"
         require(section == expected_section, f"Incorrect project section: {project}")
         found.extend(repositories)
+        if project == "RHEL-sniperpatching":
+            require(links.count("https://kvegh.github.io/RHEL-sniperpatching/") == 1,
+                    "RHEL Sniperpatching entry must link its visualization once")
     require(set(found) == expected, "Project repositories missing or duplicated")
     require(WINDOWS_VISUALIZATION in homepage.links, "Canonical Windows visualization missing")
     require("https://kvegh.github.io/disconnected-windows-patching/" not in homepage.links,

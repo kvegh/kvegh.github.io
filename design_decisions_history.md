@@ -234,3 +234,17 @@ styles, six exact original screenshots with their destinations, archive and
 original notes. A focused HTTP check also confirmed the exact expansion and
 book reference, with deployed HTML byte-identical to the committed source.
 Browser appearance remains unverified under the existing owner choice.
+
+
+## 2026-11-24 09:08 CET — Link the RHEL Sniperpatching walkthrough
+
+The owner requested the missing visualization link on the homepage itself. Add
+a Visualization link beside Repository in the existing RHEL Sniperpatching
+entry, using the established link style and verified public walkthrough URL.
+Preserve the page layout, other project entries and existing publishing setup.
+Homepage patch version 0.2.3 records the missing-link correction. Extend the
+existing deployed HTTP test to require the destination within the correct entry.
+No browser installation is authorized; visual rendering remains unverified.
+The owner subsequently supplied a screenshot to add as this entry's preview;
+obtaining its original file is pending, so this release adds the link first.
+Implementation and publication evidence will be recorded after verification.

@@ -7,7 +7,7 @@ author name and role.
 
 **Website:** https://kvegh.github.io/
 **Archive:** https://kvegh.github.io/archive/
-**Current homepage version:** 0.2.2
+**Current homepage version:** 0.2.3
 
 The catalogue has two sections, with jump links at the top:
 
@@ -19,7 +19,8 @@ The catalogue has two sections, with jump links at the top:
 
 All 16 entries link to their repositories. AutoDeploy, AIOps and Windows use
 the three supplied screenshot thumbnails and supported first-step visualization
-links. CCNG has laptop/mobile previews that open the full-size screenshots.
+links. RHEL Sniperpatching also links directly to its interactive walkthrough.
+CCNG has laptop/mobile previews that open the full-size screenshots.
 Vortex Panic has a matching thumbnail that opens the full-size supplied screenshot,
 alongside its existing playable GitHub Pages simulation link. Its entry includes
 the owner-provided VORTEX PANIC expansion and a Hitchhiker’s Guide reference. No
@@ -71,8 +72,9 @@ python3 -B tests/test_site.py --base-url https://kvegh.github.io/
 
 The test fetches the real homepage, linked stylesheet, archive and original notes
 URL. It checks version metadata, the author and role, all 16 distinct project
-repository links and their two-section placement, the selected Windows visualization, section navigation, original
-homepage content and the preserved notes/reference URL. It also verifies all six
+repository links and their two-section placement, the selected Windows
+visualization, the RHEL Sniperpatching walkthrough in its own project entry,
+section navigation, original homepage content and the preserved notes/reference URL. It also verifies all six
 thumbnail destinations, descriptions and served PNG/JPEG bytes against their
 originals in this checkout. It prints `PASS` lines
 and exits zero on success; any failed assertion or HTTP/TLS error exits nonzero.
