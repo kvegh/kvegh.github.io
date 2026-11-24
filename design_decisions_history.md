@@ -273,4 +273,11 @@ Homepage patch version 0.2.4 adds this supplied asset and extends the existing
 deployed HTTP check to require seven original screenshots and the two
 walkthrough links in the RHEL entry. No new layout, dependency or browser
 installation is needed. Browser rendering remains unverified.
-Implementation and publication references will follow verification.
+Implementation: accece878cd8b970f076fd657b3efb475079b3f2. GitHub Pages run
+45354876032 (pages build and deployment) completed successfully; its Pages API
+record shows this exact source built from 09:17:49 to 09:18:32 CET. The existing
+deployed HTTP test passed all four groups, including seven byte-identical
+original screenshots with their intended destinations and both walkthrough links
+in the RHEL entry. Independent read-only review found no blockers. The recovered
+original image was visually inspected; homepage browser rendering remains
+unverified under the existing no-installation instruction.

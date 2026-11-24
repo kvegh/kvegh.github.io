@@ -135,3 +135,9 @@ GitHub Pages published that revision on 2026-11-24 at 09:11:07 CET; the deployed
 HTTP check passed all four groups, including the new link in its project entry.
 The sniperpatching screenshot was not included in 0.2.3; version 0.2.4 adds it
 from the original chat upload. Browser rendering remains unverified.
+
+Version 0.2.4 adds the original sniperpatching screenshot from functional source
+[accece8](https://github.com/kvegh/kvegh.github.io/commit/accece878cd8b970f076fd657b3efb475079b3f2).
+GitHub Pages published that revision on 2026-11-24 at 09:18:32 CET. The deployed
+HTTP check passed all four groups, including all seven original screenshot files
+and their intended links. Browser rendering remains unverified.
